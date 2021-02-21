@@ -3,10 +3,14 @@ const loadingWrapper = document.querySelector(
 ) as HTMLDivElement;
 const loader = document.querySelector(".loader") as HTMLDivElement;
 
-window.addEventListener("load", function () {
-  setTimeout(fadeLoader, 1000);
-  setTimeout(removeLoader, 1200);
-});
+export default function handleLoadingSpinner(): void {
+  fadeLoader();
+  removeLoader();
+  window.addEventListener("load", function () {
+    setTimeout(fadeLoader, 1000);
+    setTimeout(removeLoader, 1200);
+  });
+}
 
 function fadeLoader() {
   loadingWrapper.style.opacity = "0";

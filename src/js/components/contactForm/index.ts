@@ -1,4 +1,4 @@
-import { checkInputLength, validateEmailValue } from "./utils/validation";
+import { checkInputLength, validateEmailValue } from "../../utils/index";
 
 const contactForm = document.querySelector("#contactForm") as HTMLFormElement;
 

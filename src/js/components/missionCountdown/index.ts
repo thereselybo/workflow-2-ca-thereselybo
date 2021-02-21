@@ -1,19 +1,28 @@
-fetch("https://api.spacexdata.com/v3/launches/next")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    getDeadline(data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+// export default function handleCountdown(): void {
+//   getLaunches();
+//   updateTimeLeft();
+//   setInterval(updateTimeLeft, 1000);
+// }
+let deadline: number;
+
+export default function handleLaunch(): void {
+  fetch("https://api.spacexdata.com/v3/launches/next")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      getDeadline(data);
+      // updateTimeLeft();
+      setInterval(updateTimeLeft, 1000);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
 interface NextLaunch {
   launch_date_local: string;
 }
-
-let deadline: number;
 
 function getDeadline(nextLaunch: NextLaunch) {
   deadline = new Date(Date.parse(nextLaunch.launch_date_local)).getTime(); // deadline.launch_date_local
@@ -58,4 +67,4 @@ function updateTimeLeft() {
   }
 }
 
-setInterval(updateTimeLeft, 1000);
+// setInterval(updateTimeLeft, 1000);

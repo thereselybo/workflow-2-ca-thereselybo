@@ -1,14 +1,16 @@
-fetch("https://api.spacexdata.com/v3/launches/past")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (json) {
-    displayLaunch(json);
-    console.log(json);
-  })
-  .catch(function (error) {
-    console.dir(error);
-  });
+export default function handleLaunches(): void {
+  fetch("https://api.spacexdata.com/v3/launches/past")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (json) {
+      displayLaunch(json);
+      // console.log(json);
+    })
+    .catch(function (error) {
+      console.dir(error);
+    });
+}
 
 interface Launches {
   [index: string]: Launch;
