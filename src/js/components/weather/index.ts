@@ -1,15 +1,17 @@
-fetch(
-  "https://api.nasa.gov/insight_weather/?api_key=yqhLhEsvHwxQuxrqhhAgVRGLkZUtZP4E7Zkbir3k&feedtype=json&ver=1.0"
-)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    displayWeather(data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+export default function handleWeather() {
+  fetch(
+    "https://api.nasa.gov/insight_weather/?api_key=yqhLhEsvHwxQuxrqhhAgVRGLkZUtZP4E7Zkbir3k&feedtype=json&ver=1.0"
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      displayWeather(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
 // interface Weather {
 //   [index: string]: Sol;
