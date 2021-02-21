@@ -41,14 +41,3 @@ function validateForm(event: Event): void {
     newsletterValidated.style.display = "none";
   }
 }
-
-// function checkLength(value: string): string {
-//   const trimmed = value.trim();
-
-//   return trimmed;
-// }
-
-// function validateEmail(email: string): boolean {
-//   const regEx = /\S+@\S+\.\S+/;
-//   return regEx.test(email);
-// }

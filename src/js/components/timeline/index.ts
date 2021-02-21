@@ -5,7 +5,6 @@ export default function handleLaunches(): void {
     })
     .then(function (json) {
       displayLaunch(json);
-      // console.log(json);
     })
     .catch(function (error) {
       console.dir(error);

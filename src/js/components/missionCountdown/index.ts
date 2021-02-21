@@ -1,8 +1,3 @@
-// export default function handleCountdown(): void {
-//   getLaunches();
-//   updateTimeLeft();
-//   setInterval(updateTimeLeft, 1000);
-// }
 let deadline: number;
 
 export default function handleLaunch(): void {
@@ -12,7 +7,6 @@ export default function handleLaunch(): void {
     })
     .then(function (data) {
       getDeadline(data);
-      // updateTimeLeft();
       setInterval(updateTimeLeft, 1000);
     })
     .catch(function (error) {
@@ -25,7 +19,7 @@ interface NextLaunch {
 }
 
 function getDeadline(nextLaunch: NextLaunch): void {
-  deadline = new Date(Date.parse(nextLaunch.launch_date_local)).getTime(); // deadline.launch_date_local
+  deadline = new Date(Date.parse(nextLaunch.launch_date_local)).getTime();
 
   updateTimeLeft();
 }
@@ -66,5 +60,3 @@ function updateTimeLeft(): void {
     secText.innerText = "Seconds";
   }
 }
-
-// setInterval(updateTimeLeft, 1000);

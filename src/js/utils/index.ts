@@ -9,7 +9,6 @@ export function checkInputLength(value: string): boolean {
 }
 
 export function validateEmailValue(email: string): boolean {
-  //double check
   const regEx = /\S+@\S+\.\S+/;
   return regEx.test(email);
 }
