@@ -52,7 +52,7 @@ function validateContactForm(event: Event): void {
     noEmailError.style.display = "block";
   }
 
-  const message = document.querySelector("#message") as HTMLInputElement;
+  const message = document.querySelector("#message") as HTMLTextAreaElement;
   const messageError = document.querySelector(
     "#messageError"
   ) as HTMLDivElement;
