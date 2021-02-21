@@ -23,8 +23,7 @@ export default function handleMap(): void {
       console.log(error);
     });
   getLocation();
-
-  countdown = setInterval(getLocation, 3000);
+  countdown = setInterval(getLocation, 5000);
 }
 
 // const loader = new Loader({
@@ -95,7 +94,6 @@ function getLocation(): void {
     }
   )
     .then(function (response) {
-      console.log("getting location");
       return response.json();
     })
     .then(function (json) {
@@ -114,7 +112,9 @@ interface ISSPosition {
   };
 }
 
-function updateLocation(iss: ISSPosition) {
+function updateLocation(iss: ISSPosition): void {
+  console.log("updating");
+
   const position = iss.iss_position;
 
   lat = parseInt(position.latitude);
@@ -125,5 +125,3 @@ function updateLocation(iss: ISSPosition) {
   marker.setPosition(newPosition);
   map.setCenter(newPosition);
 }
-
-// const countdown = setInterval(getLocation, 3000);

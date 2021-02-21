@@ -13,6 +13,7 @@ export default function handleWeather() {
     });
 }
 
+// WORK IN PROGRESS TO GET RID OF WEATHER: ANY
 // interface Weather {
 //   [index: string]: Sol;
 //   sol_keys?: string,

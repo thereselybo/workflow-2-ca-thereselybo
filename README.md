@@ -14,16 +14,17 @@ The following commands can be used in the project:
 
 ```
 npm run test
+npm run build
 ```
 
 ### To do
 
 - [x] Convert to TypeScript
-- [ ] Get rid of the one and only "any"
 - [x] Create two unit tests
-- [ ] Create push Action for the unit tests
+- [x] Create push Action for the unit tests
+- [x] Make modules
+- [ ] Get rid of the one and only "any"
 - [ ] Separate functions doing/returning multiple things
-- [ ] Make modules
 
 ## Live project
 
