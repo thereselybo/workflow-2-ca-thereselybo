@@ -24,13 +24,13 @@ interface NextLaunch {
   launch_date_local: string;
 }
 
-function getDeadline(nextLaunch: NextLaunch) {
+function getDeadline(nextLaunch: NextLaunch): void {
   deadline = new Date(Date.parse(nextLaunch.launch_date_local)).getTime(); // deadline.launch_date_local
 
   updateTimeLeft();
 }
 
-function updateTimeLeft() {
+function updateTimeLeft(): void {
   const today = new Date().getTime();
   const timeLeft = deadline - today;
 

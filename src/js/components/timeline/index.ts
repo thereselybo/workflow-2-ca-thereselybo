@@ -22,7 +22,7 @@ interface Launch {
   details: string;
 }
 
-function displayLaunch(json: Array<Launches>) {
+function displayLaunch(json: Array<Launches>): void {
   const results = json.reverse();
   const container = document.querySelector(
     "#previous-missions"

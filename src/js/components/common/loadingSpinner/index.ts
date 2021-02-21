@@ -12,7 +12,7 @@ export default function handleLoadingSpinner(): void {
   });
 }
 
-function fadeLoader() {
+function fadeLoader(): void {
   loadingWrapper.style.opacity = "0";
   loadingWrapper.style.transition = "all ease-in .2s";
 
@@ -20,7 +20,7 @@ function fadeLoader() {
   loader.style.transition = "all ease-in .2s";
 }
 
-function removeLoader() {
+function removeLoader(): void {
   loadingWrapper.style.display = "none";
   loader.style.display = "none";
 }

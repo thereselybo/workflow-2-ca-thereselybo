@@ -1,8 +1,9 @@
 import { checkInputLength, validateEmailValue } from "../../utils/index";
 
-const contactForm = document.querySelector("#contactForm") as HTMLFormElement;
-
-contactForm.addEventListener("submit", validateContactForm);
+export default function handleContactForm(): void {
+  const contactForm = document.querySelector("#contactForm") as HTMLFormElement;
+  contactForm.addEventListener("submit", validateContactForm);
+}
 
 function validateContactForm(event: Event): void {
   event.preventDefault();

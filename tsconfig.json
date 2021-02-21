@@ -9,7 +9,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["google.maps", "jest"]
+    "types": ["google.maps", "jest"],
+    "moduleResolution": "node"
   },
   "include": ["src"]
 }
