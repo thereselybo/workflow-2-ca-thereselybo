@@ -1,4 +1,4 @@
-function updateTimer() {
+export default function updateTimer() {
   const deadline = new Date("2025-01-01").getTime();
 
   const today = new Date().getTime();

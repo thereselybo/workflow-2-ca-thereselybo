@@ -3,12 +3,16 @@ const loadingWrapper = document.querySelector(
 ) as HTMLDivElement;
 const loader = document.querySelector(".loader") as HTMLDivElement;
 
-window.addEventListener("load", function () {
-  setTimeout(fadeLoader, 1000);
-  setTimeout(removeLoader, 1200);
-});
+export default function handleLoadingSpinner(): void {
+  fadeLoader();
+  removeLoader();
+  window.addEventListener("load", function () {
+    setTimeout(fadeLoader, 1000);
+    setTimeout(removeLoader, 1200);
+  });
+}
 
-function fadeLoader() {
+function fadeLoader(): void {
   loadingWrapper.style.opacity = "0";
   loadingWrapper.style.transition = "all ease-in .2s";
 
@@ -16,7 +20,7 @@ function fadeLoader() {
   loader.style.transition = "all ease-in .2s";
 }
 
-function removeLoader() {
+function removeLoader(): void {
   loadingWrapper.style.display = "none";
   loader.style.display = "none";
 }

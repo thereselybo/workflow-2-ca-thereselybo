@@ -2,14 +2,15 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es2015",
-    "outDir": "./dist",
+    "outDir": "./dist/",
     "rootDir": "./src",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["google.maps", "jest"]
+    "types": ["google.maps", "jest"],
+    "moduleResolution": "node"
   },
   "include": ["src"]
 }
