@@ -36,8 +36,6 @@ export default function handleWeather() {
 // }
 
 function displayWeather(weather: any) {
-  console.log(weather);
-
   const allSols = weather.sol_keys;
   const numberOfSols: number = allSols.length;
 

@@ -1,11 +1,12 @@
 export default function handleHumansInSpace(): void {
   fetch(
-    "https://cors-anywhere.herokuapp.com/http://api.open-notify.org/astros.json",
-    {
-      headers: {
-        "Access-Control-Allow-Headers": "*",
-      },
-    }
+    "http://api.open-notify.org/astros.json"
+    // "https://cors-anywhere.herokuapp.com/http://api.open-notify.org/astros.json",
+    // {
+    //   headers: {
+    //     "Access-Control-Allow-Headers": "*",
+    //   },
+    // }
   )
     .then(function (response) {
       return response.json();

@@ -50,12 +50,13 @@ function initMap(): void {
 
 function getLocation(): void {
   fetch(
-    "https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json",
-    {
-      headers: {
-        "Access-Control-Allow-Headers": "*",
-      },
-    }
+    "http://api.open-notify.org/iss-now.json"
+    // "https://cors-anywhere.herokuapp.com/http://api.open-notify.org/iss-now.json",
+    // {
+    //   headers: {
+    //     "Access-Control-Allow-Headers": "*",
+    //   },
+    // }
   )
     .then(function (response) {
       return response.json();
