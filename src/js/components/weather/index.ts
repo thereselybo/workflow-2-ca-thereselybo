@@ -36,8 +36,19 @@ export default function handleWeather() {
 // }
 
 function displayWeather(weather: any) {
+  console.log(weather);
+
   const allSols = weather.sol_keys;
   const numberOfSols: number = allSols.length;
+
+  const weatherSection = document.querySelector(
+    ".weather-section"
+  ) as HTMLDivElement;
+
+  if (!allSols.length) {
+    weatherSection.style.display = "none";
+    return;
+  }
 
   const mostRecentContainer = document.querySelector(
     "#most-recent-report"
